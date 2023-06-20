@@ -20,6 +20,7 @@ def main():
     bom_rct=bom.get_rect()
     bom_rct.center=x,y #爆弾rctの中心座標を乱数で指定する
     tmr = 0
+    vx,vy=+5,+5
 
     while True:
         for event in pg.event.get():
@@ -29,6 +30,7 @@ def main():
         screen.blit(bg_img, [0, 0])
         screen.blit(kk_img, [900, 400])
         screen.blit(bom,bom_rct)
+        bom_rct.move_ip(vx,vy)
         pg.display.update()
         tmr += 1
         clock.tick(50)
