@@ -44,6 +44,10 @@ def main():
             if event.type == pg.QUIT: 
                 return
             
+        if kk_rct.colliderect(bom_rct):
+            print("ゲームオーバー")
+            return
+        
         key_lst=pg.key.get_pressed()
         sum_mv=[0,0]
         for k, mv in delta.items():
