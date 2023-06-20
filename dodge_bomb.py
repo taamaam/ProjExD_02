@@ -23,15 +23,15 @@ def kkk():
     #演習1の関数
     kk_img0 = pg.transform.rotozoom(pg.image.load("ex02/fig/3.png"), 0, 2.0)
     kk_img1 = pg.transform.flip(kk_img0, True, False)
-    return{(0, 0):kk_img0, 
-           (-5, 0):kk_img0,
-           (-5, -5):pg.transform.rotozoom(kk_img0, -45, 1.0),
-           (-5, +5):pg.transform.rotozoom(kk_img0, 45, 1.0),
-           (0, -5):pg.transform.rotozoom(kk_img1, 90, 1.0),
-           (+5, -5):pg.transform.rotozoom(kk_img1, 45, 1.0),
-           (+5, 0):pg.transform.rotozoom(kk_img1, 0, 1.0),
-           (+5, +5):pg.transform.rotozoom(kk_img1, -45, 1.0),
-           (0, +5):pg.transform.rotozoom(kk_img1, -90, 1.0)
+    return{(0, 0):kk_img0, #通常の状態
+           (-5, 0):kk_img0,#左を向いている状態
+           (-5, -5):pg.transform.rotozoom(kk_img0, -45, 1.0),#左下を向いている状態
+           (-5, +5):pg.transform.rotozoom(kk_img0, 45, 1.0),#左上を向いている状態
+           (0, -5):pg.transform.rotozoom(kk_img1, 90, 1.0),#上を向いている状態
+           (+5, -5):pg.transform.rotozoom(kk_img1, 45, 1.0),#右下を向いている状態
+           (+5, 0):pg.transform.rotozoom(kk_img1, 0, 1.0),#右を向いている状態
+           (+5, +5):pg.transform.rotozoom(kk_img1, -45, 1.0),#右上を向いている状態
+           (0, +5):pg.transform.rotozoom(kk_img1, -90, 1.0)#下を向いている状態
     }
 
 
